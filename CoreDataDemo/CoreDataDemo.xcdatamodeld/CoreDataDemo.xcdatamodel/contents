@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19A573a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="School" representedClassName="School" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="estd" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="many" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="single" inverseEntity="Student"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="phno" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rollno" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="single" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="School" inverseName="many" inverseEntity="School"/>
+    </entity>
+    <elements>
+        <element name="School" positionX="-213.078125" positionY="-61.5859375" width="128" height="103"/>
+        <element name="Student" positionX="306.98828125" positionY="-165.953125" width="128" height="103"/>
+    </elements>
+</model>
